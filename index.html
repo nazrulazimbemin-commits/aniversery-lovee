@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Anniversary My Love ❤️ | Pixel Love Story</title>
+  
+  <!-- Retro Pixel Art Fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Heart Particles -->
+  <div id="particles-container"></div>
+
+  <!-- Top Controls (Music) -->
+  <div class="top-controls">
+    <button id="music-toggle" class="pixel-btn-icon" title="Turn Music On / Off">
+      <span id="music-icon">🎵</span>
+      <span class="music-waves" id="music-wave-bars">
+        <span class="music-bar"></span>
+        <span class="music-bar"></span>
+        <span class="music-bar"></span>
+      </span>
+      <span id="music-label">MUSIC: PLAY</span>
+    </button>
+  </div>
+
+  <!-- Theater Velvet Curtain Transition -->
+  <div id="curtain-container">
+    <div class="curtain-valance"></div>
+    <div class="curtain curtain-left" id="curtain-left"></div>
+    <div class="curtain curtain-right" id="curtain-right"></div>
+  </div>
+
+  <!-- Audio Element for Custom MP3 Music -->
+  <audio id="bg-audio" loop preload="auto"></audio>
+
+  <!-- ==============================================================
+   * 1. SCREEN 1: PASSCODE SCREEN (ENTER SECRET CODE)
+   * ============================================================== -->
+  <section id="screen-passcode" class="view-screen active">
+    <div class="pixel-card passcode-box">
+      <div class="passcode-heart-icon">💖</div>
+      <div class="pixel-tag">🗝️ OUR LOVE SANCTUARY 🗝️</div>
+      <h1 class="pixel-title">WELCOME MY LOVE</h1>
+      <p class="pixel-subtitle">Please enter our secret passcode</p>
+
+      <!-- 6-Digit PIN Display -->
+      <div class="pin-display">
+        <div class="pin-slot" id="slot-0">•</div>
+        <div class="pin-slot" id="slot-1">•</div>
+        <div class="pin-slot" id="slot-2">•</div>
+        <div class="pin-slot" id="slot-3">•</div>
+        <div class="pin-slot" id="slot-4">•</div>
+        <div class="pin-slot" id="slot-5">•</div>
+      </div>
+
+      <!-- Feedback Message -->
+      <div id="passcode-feedback" class="passcode-message">
+        Press digits to unlock my heart...
+      </div>
+
+      <!-- Retro Numpad -->
+      <div class="numpad">
+        <button class="num-btn" data-key="1">1</button>
+        <button class="num-btn" data-key="2">2</button>
+        <button class="num-btn" data-key="3">3</button>
+        <button class="num-btn" data-key="4">4</button>
+        <button class="num-btn" data-key="5">5</button>
+        <button class="num-btn" data-key="6">6</button>
+        <button class="num-btn" data-key="7">7</button>
+        <button class="num-btn" data-key="8">8</button>
+        <button class="num-btn" data-key="9">9</button>
+        <button class="num-btn btn-action" data-key="CLEAR" title="Clear All">CLEAR</button>
+        <button class="num-btn" data-key="0">0</button>
+        <button class="num-btn btn-action" data-key="DEL" title="Backspace">⌫</button>
+      </div>
+
+      <div class="passcode-hint">
+        💡 Hint: The special date our love story began (Format: DDMMYY)
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+   * 2. SCREEN 2: MAIN HUB (3 PIXEL INTERACTIVE ICONS)
+   * ============================================================== -->
+  <section id="screen-hub" class="view-screen">
+    <div class="pixel-card hub-box">
+      <div class="hub-header">
+        <div class="couple-badge">
+          <span>✨</span>
+          <span id="badge-couple-text">A &amp; O • ANNIVERSARY OF LOVE</span>
+          <span>✨</span>
+        </div>
+        <h1 class="pixel-title" id="hub-main-title">HAPPY ANNIVERSARY MY LOVE! ❤️</h1>
+        <p class="pixel-subtitle">Every moment with you is my sweetest memory</p>
+      </div>
+
+      <!-- 3 Clickable Pixel Icons -->
+      <div class="hub-grid">
+        
+        <!-- Icon 1: Love Letter Envelope -->
+        <div class="hub-card card-envelope" id="nav-btn-letter">
+          <div class="pixel-art-icon" id="sprite-envelope">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 3h14v10H1V3z" fill="#ffe4e9"/>
+              <path d="M1 3h14v1H1V3zm0 9h14v1H1v-1zM1 3v10h1V3H1zm13 0v10h1V3h-1z" fill="#ff2a85"/>
+              <path d="M2 4l6 5 6-5v1l-6 5-6-5V4z" fill="#ff6584"/>
+              <path d="M7 6h2v2H7V6z" fill="#d90429"/>
+            </svg>
+          </div>
+          <div class="hub-card-content">
+            <h3 class="hub-card-title">LOVE LETTER</h3>
+            <p class="hub-card-desc">A heartfelt letter from the depths of my soul...</p>
+          </div>
+          <span class="hub-card-btn">READ ▶</span>
+        </div>
+
+        <!-- Icon 2: Camera / Memory Vault -->
+        <div class="hub-card card-camera" id="nav-btn-gallery">
+          <div class="pixel-art-icon" id="sprite-camera">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 3h8v2H4V3z" fill="#4cc9f0"/>
+              <path d="M2 5h12v8H2V5z" fill="#1f3a52"/>
+              <path d="M1 6h14v7H1V6z" fill="#70d6ff"/>
+              <path d="M6 7h4v4H6V7z" fill="#0e0712"/>
+              <path d="M7 8h2v2H7V8z" fill="#4cc9f0"/>
+              <path d="M3 7h2v1H3V7z" fill="#ffd166"/>
+            </svg>
+          </div>
+          <div class="hub-card-content">
+            <h3 class="hub-card-title">MEMORY VAULT</h3>
+            <p class="hub-card-desc">10 eternal moments of our sweet journey together</p>
+          </div>
+          <span class="hub-card-btn">ALBUM ▶</span>
+        </div>
+
+        <!-- Icon 3: Gift Box / Puzzle & Video -->
+        <div class="hub-card card-gift" id="nav-btn-puzzle">
+          <div class="pixel-art-icon" id="sprite-gift">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4h12v4H2V4z" fill="#d90429"/>
+              <path d="M3 8h10v6H3V8z" fill="#ff6584"/>
+              <path d="M7 4h2v10H7V4z" fill="#ffd166"/>
+              <path d="M2 6h12v2H2V6z" fill="#ffd166"/>
+              <path d="M5 2h2v2H5V2zm4 0h2v2H9V2z" fill="#ffd166"/>
+            </svg>
+          </div>
+          <div class="hub-card-content">
+            <h3 class="hub-card-title">GIFT BOX PUZZLE</h3>
+            <p class="hub-card-desc">Assemble the "AOA" puzzle to unlock a surprise!</p>
+          </div>
+          <span class="hub-card-btn">PLAY ▶</span>
+        </div>
+
+      </div>
+
+      <p class="passcode-hint">❤️ Thank you for being the sweetest rainbow in my life ❤️</p>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+   * 3. SCREEN 3: LOVE LETTER (SUB-PAGE 1)
+   * ============================================================== -->
+  <section id="screen-letter" class="view-screen">
+    <div class="pixel-card letter-wrapper">
+      
+      <!-- Interactive Envelope -->
+      <div class="envelope-interactive" id="envelope-trigger">
+        <span class="seal-heart">💌</span>
+        <div style="font-family: var(--font-pixel); font-size: 10px; margin-top: 6px; color: var(--pink-soft);">
+          [ CLICK ENVELOPE TO OPEN LETTER ]
+        </div>
+      </div>
+
+      <!-- Love Letter Paper -->
+      <div class="letter-paper" id="letter-content-box">
+        <div class="letter-stamp">07.07.10 ❤️</div>
+        
+        <div class="letter-salutation" id="letter-salutation-text">
+          To the Angel of My Heart, My Forever Love,
+        </div>
+
+        <div class="letter-body" id="letter-body-text">
+          Happy Anniversary, my love! 🌹
+
+          Looking back at our journey, time has flown so swiftly, yet my love for you has only grown deeper and stronger with each passing day.
+
+          Do you remember the very moment destiny brought our hearts together on 07.07.2010? From that day forward, my entire world turned brighter, colorful, and filled with the warmth of your sweetest laughter. Thank you for always standing by my side, being my calm in every storm, and walking hand-in-hand through all of life's highs and lows.
+
+          I thank God every single day for the greatest blessing of having you in my life. My promise to you remains unwavering: this hand will never let go of yours, and this heart will cherish and love you endlessly, until the end of time and into eternity.
+
+          Happy Anniversary, sweetheart. I love you more than words could ever say! 💕
+        </div>
+
+        <div class="letter-closing">
+          Forever and always yours,<br>
+          <span id="letter-sender-name" style="font-size: 13px; color: var(--pink-neon);">❤️ Your Loving Partner ❤️</span>
+        </div>
+      </div>
+
+      <!-- Return Button -->
+      <div class="screen-footer">
+        <button class="pixel-btn pixel-btn-dark" onclick="navigateTo('screen-hub')">
+          ⬅️ BACK TO MENU
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================
+   * 4. SCREEN 4: MEMORY VAULT / 10 PHOTO GALLERY (SUB-PAGE 2)
+   * ============================================================== -->
+  <section id="screen-gallery" class="view-screen">
+    <div class="pixel-card gallery-wrapper">
+      
+      <div class="pixel-tag">📸 LOVE STORY ALBUM 📸</div>
+      <h2 class="pixel-title">SWEETEST MEMORIES</h2>
+      <p class="pixel-subtitle">10 Timeless Moments Etched in Our Hearts</p>
+
+      <!-- 10 Photos Grid (5 Columns on Desktop, 2 on Mobile) -->
+      <div class="gallery-grid" id="gallery-container"></div>
+
+      <!-- Return Button -->
+      <div class="screen-footer">
+        <button class="pixel-btn pixel-btn-dark" onclick="navigateTo('screen-hub')">
+          ⬅️ BACK TO MENU
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Fullscreen Modal -->
+  <div id="gallery-modal">
+    <div class="modal-box">
+      <div class="pixel-tag" id="modal-tag">MEMORY #1</div>
+      <h3 class="pixel-title" id="modal-title" style="font-size: 13px; margin-bottom: 4px;">Photo Title</h3>
+      
+      <div class="modal-img-container">
+        <img src="" alt="Sweet Memory" id="modal-img-element" class="modal-img">
+      </div>
+
+      <p id="modal-desc" style="font-family: var(--font-vt); font-size: 18px; color: var(--pink-light); min-height: 36px;">
+        Our sweet moment description...
+      </p>
+
+      <div class="modal-nav">
+        <button class="pixel-btn pixel-btn-secondary" id="modal-prev-btn">◀ PREV</button>
+        <button class="pixel-btn" id="modal-close-btn">CLOSE ✖</button>
+        <button class="pixel-btn pixel-btn-secondary" id="modal-next-btn">NEXT ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+   * 5. SCREEN 5: "AOA" PIECE PUZZLE & VIDEO SURPRISE (SUB-PAGE 3)
+   * ============================================================== -->
+  <section id="screen-puzzle" class="view-screen">
+    <div class="pixel-card puzzle-wrapper">
+      
+      <div class="pixel-tag">🎁 SECRET GIFT CHALLENGE 🎁</div>
+      <h2 class="pixel-title">"AOA" PIECE PUZZLE</h2>
+      <p class="pixel-subtitle">Angkat & letakkan kepingan untuk susun gambar dan buka hadiah istimewa!</p>
+
+      <!-- Interactive Helper Tip -->
+      <div id="puzzle-helper-tip" style="font-family: var(--font-vt); font-size: 17px; color: var(--gold-accent); margin: 6px auto 14px; background: rgba(0,0,0,0.6); padding: 6px 14px; border: 1.5px dashed var(--pink-bright); max-width: 520px; line-height: 1.3;">
+        💡 Klik/sentuh kepingan untuk angkat 🖐️, kemudian klik tempat baru untuk letak (atau drag & drop terus)!
+      </div>
+
+      <div class="puzzle-layout">
+        
+        <!-- 3x3 Puzzle Board -->
+        <div class="puzzle-board-container">
+          <div id="puzzle-board"></div>
+        </div>
+
+        <!-- Sidebar (Preview & Controls) -->
+        <div class="puzzle-sidebar">
+          <div style="font-family: var(--font-pixel); font-size: 9px; color: var(--gold-accent); text-align: center;">
+            TARGET PICTURE (AOA):
+          </div>
+          
+          <div class="preview-box">
+            <canvas id="puzzle-canvas-source" width="300" height="300" style="display:none;"></canvas>
+            <img id="puzzle-preview-img" class="preview-img" alt="AOA Target Preview">
+          </div>
+
+          <div class="puzzle-stats">
+            <span>MOVES: <strong id="puzzle-moves-count" style="color:var(--white-pure);">0</strong></span>
+            <span>TIME: <strong id="puzzle-timer" style="color:var(--gold-accent);">00:00</strong></span>
+          </div>
+
+          <div class="puzzle-controls">
+            <button class="pixel-btn" id="puzzle-shuffle-btn">
+              🔀 SHUFFLE AGAIN
+            </button>
+            <button class="pixel-btn pixel-btn-secondary" id="puzzle-solve-btn" title="Click to instantly complete and reveal the video reward!">
+              ✨ AUTO-SOLVE
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Video Reward Section (Appears after solving) -->
+      <div id="puzzle-success-section">
+        <div class="video-reward-card">
+          <div style="font-size: 32px; margin-bottom: 8px;">🎉 🏆 💖</div>
+          <h2 class="pixel-title" style="color: var(--gold-accent); font-size: 16px;">
+            CONGRATULATIONS SWEETHEART! BOX UNLOCKED!
+          </h2>
+          <p style="font-family: var(--font-vt); font-size: 20px; color: var(--pink-soft);">
+            Here is your special anniversary video greeting:
+          </p>
+
+          <!-- Video Container (YouTube / MP4) -->
+          <div class="video-container" id="video-display-area"></div>
+
+          <p style="font-family: var(--font-silk); font-size: 10px; color: var(--blue-soft); line-height: 1.5;">
+            "May every step of our journey be blessed with eternal joy, warmth, and love." 🌹
+          </p>
+        </div>
+      </div>
+
+      <!-- Return Button -->
+      <div class="screen-footer">
+        <button class="pixel-btn pixel-btn-dark" onclick="navigateTo('screen-hub')">
+          ⬅️ BACK TO MENU
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
